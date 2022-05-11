@@ -10,6 +10,7 @@ import Spinner from '../components/Spinner'
 
 function CreateListing() {
     const [loading, setLoading] = useState(false)
+    // eslint-disable-next-line
     const [geolocationEnabled, setGeolocationEnabled] = useState(false)
     const [formData, setFormData] = useState({
         type: "rent",
@@ -118,6 +119,8 @@ function CreateListing() {
                             case 'running':
                                 console.log('Upload is running');
                                 break;
+                            default:
+                                break;
                         }
                     },
                     (error) => {
@@ -211,7 +214,7 @@ function CreateListing() {
                 </div>
 
                 <label className="formLabel">Name</label>
-                <input type="text" className="formInputName" id="name" onChange={onMutate} maxLength="32" minLength="10" required />
+                <input type="text" className="formInputName" id="name" onChange={onMutate} value={name} maxLength="32" minLength="10" required />
 
                 <div className="formRooms flex">
                     <div>

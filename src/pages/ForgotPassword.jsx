@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+// eslint-disable-next-line
 import { getAuth, sendPasswordReset, sendPasswordResetEmail } from 'firebase/auth'
 import { toast } from 'react-toastify'
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg"
